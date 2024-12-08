@@ -1,6 +1,6 @@
-[![Express Logo](https://i.cloudup.com/zfY6lL7eFa-3000x3000.png)](https://expressjs.com/)
+[![Express Logo](https://i.cloudup.com/zfY6lL7eFa-3000x3000.png)](http://expressjs.com/)
 
-**Fast, unopinionated, minimalist web framework for [Node.js](https://nodejs.org).**
+**Fast, unopinionated, minimalist web framework for [Node.js](http://nodejs.org).**
 
 **This project has a [Code of Conduct][].**
 
@@ -26,11 +26,10 @@
 
 
 ```js
-import express from 'express'
-
+const express = require('express')
 const app = express()
 
-app.get('/', (req, res) => {
+app.get('/', function (req, res) {
   res.send('Hello World')
 })
 
@@ -43,7 +42,7 @@ This is a [Node.js](https://nodejs.org/en/) module available through the
 [npm registry](https://www.npmjs.com/).
 
 Before installing, [download and install Node.js](https://nodejs.org/en/download/).
-Node.js 18 or higher is required.
+Node.js 0.10 or higher is required.
 
 If this is a brand new project, make sure to create a `package.json` first with
 the [`npm init` command](https://docs.npmjs.com/creating-a-package-json-file).
@@ -51,11 +50,11 @@ the [`npm init` command](https://docs.npmjs.com/creating-a-package-json-file).
 Installation is done using the
 [`npm install` command](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):
 
-```bash
-npm install express
+```console
+$ npm install express
 ```
 
-Follow [our installing guide](https://expressjs.com/en/starter/installing.html)
+Follow [our installing guide](http://expressjs.com/en/starter/installing.html)
 for more information.
 
 ## Features
@@ -70,11 +69,14 @@ for more information.
 
 ## Docs & Community
 
-  * [Website and Documentation](https://expressjs.com/) - [[website repo](https://github.com/expressjs/expressjs.com)]
+  * [Website and Documentation](http://expressjs.com/) - [[website repo](https://github.com/expressjs/expressjs.com)]
+  * [#express](https://web.libera.chat/#express) on [Libera Chat](https://libera.chat) IRC
   * [GitHub Organization](https://github.com/expressjs) for Official Middleware & Modules
-  * [Github Discussions](https://github.com/expressjs/discussions) for discussion on the development and usage of Express
+  * Visit the [Wiki](https://github.com/expressjs/express/wiki)
+  * [Google Group](https://groups.google.com/group/express-js) for discussion
+  * [Gitter](https://gitter.im/expressjs/express) for support and discussion
 
-**PROTIP** Be sure to read the [migration guide to v5](https://expressjs.com/en/guide/migrating-5)
+**PROTIP** Be sure to read [Migrating from 3.x to 4.x](https://github.com/expressjs/express/wiki/Migrating-from-3.x-to-4.x) as well as [New features in 4.x](https://github.com/expressjs/express/wiki/New-features-in-4.x).
 
 ## Quick Start
 
@@ -82,26 +84,26 @@ for more information.
 
   Install the executable. The executable's major version will match Express's:
 
-```bash
-npm install -g express-generator@4
+```console
+$ npm install -g express-generator@4
 ```
 
   Create the app:
 
-```bash
-express /tmp/foo && cd /tmp/foo
+```console
+$ express /tmp/foo && cd /tmp/foo
 ```
 
   Install dependencies:
 
-```bash
-npm install
+```console
+$ npm install
 ```
 
   Start the server:
 
-```bash
-npm start
+```console
+$ npm start
 ```
 
   View the website at: http://localhost:3000
@@ -113,32 +115,29 @@ npm start
   HTTP APIs.
 
   Express does not force you to use any specific ORM or template engine. With support for over
-  14 template engines via [@ladjs/consolidate](https://github.com/ladjs/consolidate),
+  14 template engines via [Consolidate.js](https://github.com/tj/consolidate.js),
   you can quickly craft your perfect framework.
 
 ## Examples
 
-  To view the examples, clone the Express repository:
+  To view the examples, clone the Express repo and install the dependencies:
 
-```bash
-git clone https://github.com/expressjs/express.git --depth 1 && cd express
-```
-
-  Then install the dependencies:
-
-```bash
-npm install
+```console
+$ git clone https://github.com/expressjs/express.git --depth 1
+$ cd express
+$ npm install
 ```
 
   Then run whichever example you want:
 
-```bash
-node examples/content-negotiation
+```console
+$ node examples/content-negotiation
 ```
 
 ## Contributing
 
   [![Linux Build][github-actions-ci-image]][github-actions-ci-url]
+  [![Windows Build][appveyor-image]][appveyor-url]
   [![Test Coverage][coveralls-image]][coveralls-url]
 
 The Express.js project welcomes all constructive contributions. Contributions take many forms,
@@ -153,16 +152,11 @@ If you discover a security vulnerability in Express, please see [Security Polici
 
 ### Running Tests
 
-To run the test suite, first install the dependencies:
+To run the test suite, first install the dependencies, then run `npm test`:
 
-```bash
-npm install
-```
-
-Then run `npm test`:
-
-```bash
-npm test
+```console
+$ npm install
+$ npm test
 ```
 
 ## People
@@ -251,9 +245,11 @@ The original author of Express is [TJ Holowaychuk](https://github.com/tj)
 
   [MIT](LICENSE)
 
+[appveyor-image]: https://badgen.net/appveyor/ci/dougwilson/express/master?label=windows
+[appveyor-url]: https://ci.appveyor.com/project/dougwilson/express
 [coveralls-image]: https://badgen.net/coveralls/c/github/expressjs/express/master
 [coveralls-url]: https://coveralls.io/r/expressjs/express?branch=master
-[github-actions-ci-image]: https://badgen.net/github/checks/expressjs/express/master?label=CI
+[github-actions-ci-image]: https://badgen.net/github/checks/expressjs/express/master?label=linux
 [github-actions-ci-url]: https://github.com/expressjs/express/actions/workflows/ci.yml
 [npm-downloads-image]: https://badgen.net/npm/dm/express
 [npm-downloads-url]: https://npmcharts.com/compare/express?minimal=true
