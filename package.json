@@ -58,7 +58,7 @@
     "router": "^2.0.0",
     "send": "^1.1.0",
     "serve-static": "^2.1.0",
-    "statuses": "2.0.1",
+    "statuses": "2.0.2",
     "type-is": "^2.0.0",
     "utils-merge": "1.0.1",
     "vary": "~1.1.2"
